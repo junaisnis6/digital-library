@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import { MdDashboard } from "react-icons/md";
 import {
   FiHome,
   FiPlusCircle,
@@ -45,6 +46,10 @@ function Navbar() {
 
         {token && (
           <>
+            <Link to="/dashboard" className="nav-item">
+              <MdDashboard size={22} />
+              Dashboard
+            </Link>
             <Link to="/add-book" className="nav-item">
               <FiPlusCircle />
               <span>Add Book</span>

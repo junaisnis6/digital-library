@@ -9,6 +9,7 @@ import AddBook from "./pages/AddBook";
 import MyBooks from "./pages/MyBooks";
 import Requests from "./pages/Requests";
 import EditBook from "./pages/EditBook";
+import Dashboard from "./pages/Dashboard";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -58,6 +59,14 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <EditBook />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/dashboard",
+        element: (
+          <ProtectedRoute>
+            <Dashboard />
           </ProtectedRoute>
         ),
       },
